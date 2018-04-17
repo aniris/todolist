@@ -1,13 +1,15 @@
 <template>
   <div class="app">
-    <header class="app-header">
+    <header class="app__header">
       <ul class="navbar">
         <li v-for="link in nav" :key="link.url" class="navbar__item">
           <router-link :to=link.url class="navbar__link">{{link.name}}</router-link>
         </li>
       </ul>
     </header>
-    <router-view/>
+    <div class="app__body">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -60,10 +62,16 @@ export default {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    &-header {
+    &__header {
       width: 100%;
       background-color: #00a5bf;
       padding: 15px 30px 10px;
+    }
+    &__body {
+      background-color: #f0efe9;
+      flex-grow: 1;
+      width: 100%;
+      padding: 0 20px;
     }
   }
   .navbar {

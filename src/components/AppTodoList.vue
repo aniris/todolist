@@ -56,9 +56,10 @@ export default {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    overflow: hidden;
     &__img {
       margin-top: 15px;
-      width: 350px;
+      max-width: 350px;
     }
     &__text {
       font-family: 'Roboto';
